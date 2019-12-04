@@ -1,0 +1,25 @@
+<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        DocumentRoot {{ getenv "DEFAULT_ROOT" "/var/www/html" }}{{ getenv "WEB_ROOT" "" }}
+        ServerName {{ getenv "APACHE_SERVER_NAME" "localhost" }}
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+
+        <IfModule headers_module>
+                Header set X-Frame-Options SAMEORIGIN
+                Header set X-Content-Type-Options nosniff
+        </IfModule>
+
+        <Directory "{{ getenv "DEFAULT_ROOT" "/var/www/html" }}{{ getenv "WEB_ROOT" "" }}">
+                Options +Includes +FollowSymLinks
+                AllowOverride All
+                Require all granted
+        </Directory>
+
+
+
+</VirtualHost>
+
+
+

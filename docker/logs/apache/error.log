@@ -1,0 +1,5 @@
+AH00112: Warning: DocumentRoot [/var/www/html/var/www/app] does not exist
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Wed Dec 04 03:51:43.994193 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.3.12-1+0~20191128.49+debian10~1.gbp24559b OpenSSL/1.1.1d configured -- resuming normal operations
+[Wed Dec 04 03:51:43.994315 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed Dec 04 03:52:01.239497 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
